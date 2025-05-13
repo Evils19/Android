@@ -9,8 +9,8 @@ import java.lang.Exception
 
 class MainViewModel : ViewModel() {
 
-    private val _categoryState = mutableStateOf(RecipeState())
-    val categoriesState: State<RecipeState> = _categoryState
+    private val _categoryState = mutableStateOf(Cat())
+    val categoriesState: State<Cat> = _categoryState
 
     init {
         fetchCategories()
@@ -35,7 +35,7 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    data class RecipeState(
+    data class Cat(
         val loading: Boolean = true,
         val list: List<Category> = emptyList(),
         val error: String? = null
